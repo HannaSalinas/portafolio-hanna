@@ -60,7 +60,7 @@ Email: salinashanna123@gmail.com
 
 GitHub: @HannaSalinas
 
-LinkedIn: (próximamente lo actualizamos)
+LinkedIn: https://www.linkedin.com/in/hanna-jineth-contreras-salinas-0401b235b/
 
 
 ---
