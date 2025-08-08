@@ -10,6 +10,7 @@
 </head>
 
 <body>
+  <!-- ENCABEZADO -->
   <header class="main-header">
     <img src="perfil.jpg" alt="Foto de perfil de Hanna" class="header-img">
     <div class="header-text">
@@ -19,23 +20,23 @@
   </header>
 
   <main>
-    <!-- Tarjeta lateral -->
-    <section class="profile-card">
+    <!-- TARJETA LATERAL -->
+    <aside class="profile-card">
       <img src="perfil.jpg" alt="Retrato de Hanna" class="profile-img">
       <div class="profile-info">
         <h3>Hanna J. Contreras</h3>
         <p>💻 Desarrolladora en formación</p>
         <p>📍 Chigorodó, Colombia</p>
       </div>
-    </section>
+    </aside>
 
-    <!-- Sobre mí -->
+    <!-- SOBRE MÍ -->
     <section class="about">
       <h2>Sobre mí</h2>
-      <p>Soy Hanna, una creadora de rutas digitales que camina entre versos y líneas de código...</p>
+      <p>Soy Hanna, una creadora de rutas digitales que camina entre versos y líneas de código. Mi objetivo es unir el diseño, la funcionalidad y la creatividad para construir experiencias únicas.</p>
       <ul>
-        <li>📌 Aún no tengo años de experiencia, pero tengo horas infinitas de dedicación y amor por lo que hago.</li>
-        <li>📌 Estoy en constante evolución: entre una clase de inglés, un nuevo proyecto en GitHub y un poema para entender el mundo.</li>
+        <li>📌 Horas infinitas de dedicación y amor por lo que hago.</li>
+        <li>📌 En constante evolución: inglés, nuevos proyectos en GitHub y escritura.</li>
       </ul>
       <blockquote>
         "Creo en los procesos suaves y en el poder de lo simple.<br>
@@ -44,19 +45,19 @@
       </blockquote>
     </section>
 
-    <!-- Escritora -->
-   <section class="writer">
-  <h2>Mi Lado Escritora ✍️</h2>
-  <p>La escritura me ha acompañado desde niña. Entre cuadernos, ideas y noches largas, escribo para sanar y entender el mundo. Aquí comparto una parte de mí que también construye.</p>
-  <ul class="writing-list">
-    <li>📘 <a href="textos/Cada 375 años - Poemario.pdf" target="_blank">Cada 375 años – Poemario (PDF)</a></li>
-    <li>✉️ <a href="textos/Cartas desde el noveno piso - Hanna Salinas.docx.pdf" target="_blank">Cartas desde el noveno piso</a></li>
-    <li>✉️ <a href="textos/Cartas para que no me olvides - Hanna Salinas .docx.pdf" target="_blank">Cartas para que no me olvides</a></li>
-    <li>✉️ <a href="textos/No se pesa el silencio - Hanna Salinas.docx.pdf" target="_blank">No se pesa el silencio</a></li>
-  </ul>
-</section>
+    <!-- LADO ESCRITORA -->
+    <section class="writer">
+      <h2>Mi Lado Escritora ✍️</h2>
+      <p>La escritura me ha acompañado desde niña. Entre cuadernos, ideas y noches largas, escribo para sanar y entender el mundo.</p>
+      <ul class="writing-list">
+        <li>📘 <a href="textos/Cada 375 años - Poemario.pdf" target="_blank">Cada 375 años – Poemario</a></li>
+        <li>✉️ <a href="textos/Cartas desde el noveno piso - Hanna Salinas.docx.pdf" target="_blank">Cartas desde el noveno piso</a></li>
+        <li>✉️ <a href="textos/Cartas para que no me olvides - Hanna Salinas .docx.pdf" target="_blank">Cartas para que no me olvides</a></li>
+        <li>✉️ <a href="textos/No se pesa el silencio - Hanna Salinas.docx.pdf" target="_blank">No se pesa el silencio</a></li>
+      </ul>
+    </section>
 
-    <!-- Tecnologías -->
+    <!-- TECNOLOGÍAS -->
     <section class="skills">
       <h2>Tecnologías</h2>
       <ul class="tech-list">
@@ -65,10 +66,11 @@
         <li>JavaScript</li>
         <li>Git & GitHub</li>
         <li>VS Code</li>
+        <li>Linux</li>
       </ul>
     </section>
 
-    <!-- Proyectos -->
+    <!-- PROYECTOS -->
     <section class="projects">
       <h2>Mis Proyectos</h2>
       <div class="slider-container">
@@ -95,17 +97,38 @@
       </div>
     </section>
 
-    <!-- Certificados -->
-    <section class="certificates">
-      <h2>Certificados 📜</h2>
-      <p>Muy pronto podrás ver aquí mis logros académicos y técnicos.</p>
-    </section>
+ <!-- CERTIFICADOS -->
+<section class="certificates">
+  <h2>Certificados 📜</h2>
+  <div class="certificates-grid">
+    
+    <!-- Certificado 1 -->
+    <div class="certificate-card">
+      <img src="certificado-google-ti.png" 
+           alt="Certificado Google TI" 
+           onclick="openModal('certificado-google-ti.png')">
+      <h4>Google IT Support</h4>
+      <button class="btn-view" onclick="openModal('certificado-google-ti.png')">Ver</button>
+    </div>
 
-    <!-- Libro -->
-    <section class="book">
-      <h2>Mi Primer Libro 📖</h2>
-      <p>Estoy escribiendo una obra inspirada en mi primer amor. Muy pronto disponible aquí.</p>
-    </section>
+    <!-- Certificado 2 -->
+    <div class="certificate-card">
+      <img src="certificado-marketing-coursera.png" 
+           alt="Certificado Marketing Digital" 
+           onclick="openModal('certificado-marketing-coursera.png')">
+      <h4>Marketing Digital - Coursera</h4>
+      <button class="btn-view" onclick="openModal('certificado-marketing-coursera.png')">Ver</button>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- MODAL -->
+    <div id="modal" class="modal">
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modal-img">
+    </div>
 
     <!-- CV -->
     <section class="cv">
@@ -113,7 +136,7 @@
       <a href="Hoja de vida Hanna Contreras.pdf" download class="btn-cv">📄 Descargar CV</a>
     </section>
 
-    <!-- Contacto -->
+    <!-- CONTACTO -->
     <section class="contact">
       <h2>Contacto</h2>
       <p>Email: <a href="mailto:salinashanna123@gmail.com">salinashanna123@gmail.com</a></p>
@@ -122,6 +145,7 @@
     </section>
   </main>
 
+  <!-- PIE -->
   <footer>
     <p>🌸 Portafolio hecho con 💜 por Hanna Jineth Contreras Salinas – 2025</p>
   </footer>
@@ -129,4 +153,6 @@
   <script src="script.js"></script>
 </body>
 </html>
+
+
 

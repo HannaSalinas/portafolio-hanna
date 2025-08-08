@@ -1,5 +1,6 @@
-console.log("🌸 Bienvenida al portafolio de Hanna");
+console.log("🌸 Bienvenid@ al portafolio de Hanna");
 
+// ======== SLIDER DE PROYECTOS ========
 document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelector(".slides");
   const slideItems = document.querySelectorAll(".slide");
@@ -27,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     startAutoSlide();
   };
 
-  // Eventos
+  // Eventos para slider
   btnLeft?.addEventListener("click", () => changeSlide(-1));
   btnRight?.addEventListener("click", () => changeSlide(1));
 
@@ -40,6 +41,40 @@ document.addEventListener("DOMContentLoaded", () => {
   updateSlider();
   startAutoSlide();
 });
+
+// ======== MODAL CERTIFICADOS ========
+function openModal(imgSrc) {
+  const modal = document.getElementById("modal");
+  const modalImg = document.getElementById("modal-img");
+  modal.style.display = "block";
+  modalImg.src = imgSrc; // ✅ Ruta directa para que funcione
+  modal.classList.add("fade-in");
+}
+
+function closeModal() {
+  const modal = document.getElementById("modal");
+  modal.classList.remove("fade-in");
+  modal.classList.add("fade-out");
+
+  setTimeout(() => {
+    modal.style.display = "none";
+    modal.classList.remove("fade-out");
+  }, 300);
+}
+
+// Cerrar modal con tecla ESC
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeModal();
+});
+
+// Cerrar modal al hacer clic fuera de la imagen
+document.getElementById("modal").addEventListener("click", (e) => {
+  if (e.target.id === "modal") {
+    closeModal();
+  }
+});
+
+
 
 
   
